@@ -401,19 +401,157 @@ for (let i = 1; i < arvalue.length; i++) {
 
 console.log("Max:", max);
 
-  let sum1 = 0;
-  for (let i = 0; i < arvalue.length; i++) {
-      sum1 +=arvalue[i]      
-  } 
- let aver = sum1 / arvalue.length;
- console.log(aver);
- 
-  
- let graterthen50 = [];
- for (let i = 0; i < arvalue.length; i++) {
-    if (arvalue[i]>50) {
+let sum1 = 0;
+for (let i = 0; i < arvalue.length; i++) {
+    sum1 += arvalue[i]
+}
+let aver = sum1 / arvalue.length;
+console.log(aver);
+
+
+let graterthen50 = [];
+for (let i = 0; i < arvalue.length; i++) {
+    if (arvalue[i] > 50) {
         graterthen50.push(arvalue[i])
     }
- }
- console.log(graterthen50);
- 
+}
+console.log(graterthen50);
+
+
+let reversed = [];
+
+for (let i = arvalue.length - 1; i >= 0; i--) {
+    reversed.push(arvalue[i]);
+}
+
+console.log(reversed);
+
+// Question 22: Event Handling Simulation
+// Create a function handleClick that:
+
+// Gets a value from an input field with id "username"
+// Checks if it's empty and shows an alert if so
+// Otherwise, displays "Welcome, [username]!" in a paragraph with id "greeting"
+// Resets the input field after greeting
+
+function handleClick() {
+    let input = document.getElementById('username');
+    if (input.value === '') {
+        alert('please fill this feild')
+    }
+    else {
+        let content = document.getElementById('greeting')
+        content.innerHTML = `Welcome ${input.value}`;
+        document.getElementById("username").value = "";
+    }
+}
+
+// Question 23: Form Validation Function
+// Write a function validateForm that:
+
+// Takes email and password as parameters
+// Returns true if email contains "@" and password length ≥ 8
+// Otherwise returns false with specific error messages
+// Test with multiple test cases
+
+
+function validateForm(email, password) {
+    if (!email.includes('@')) {
+        alert('email must contain @')
+        return false;
+    }
+    if (password.length < 8) {
+        alert('password must contain 8 characters');
+        return false;
+
+    }
+    return true;
+
+}
+console.log(validateForm('basitattari000@gmail.com', '12345678'));
+
+
+// Question 24: Temperature Converter
+// Create a function convertTemperature that:
+
+// Takes a temperature and a unit ("C" or "F") as parameters
+// Converts Celsius to Fahrenheit: (C × 9/5) + 32
+// Converts Fahrenheit to Celsius: (F - 32) × 5/9
+// Returns the converted value with 1 decimal place
+function convertTemperature(tepmrature, unit) {
+    if (unit === 'C') {
+        return ((tepmrature * 9 / 5) + 32).toFixed(1)
+    }
+
+    if (unit === "F") {
+        return ((temperature - 32) * 5 / 9).toFixed(1);
+    }
+
+    return "Invalid unit! Use C or F";
+
+}
+console.log(convertTemperature(25, "C"));
+
+console.log(convertTemperature(77, "F"));
+console.log(convertTemperature(100, "C"));
+
+// Question 25: Shopping Cart Array Operations
+// Create an array cart = [] and write these functions:
+
+// addItem(name, price): Adds item object to cart
+// removeItem(name): Removes item by name
+// calculateTotal(): Returns sum of all item prices
+// applyDiscount(percent): Applies discount to total
+// listItems(): Returns array of just item names
+let cart = [];
+function addItem(name, price) {
+    cart.push(
+        {
+            name: name,
+            price: price
+        }
+    );
+    
+    
+}
+function removeItem(name) {
+    cart = cart.filter((item) => {
+        return item.name !== name;
+    });
+}
+function calculateTotal(){
+let total = 0;
+for(Element of cart){
+total+=Element.price
+}
+return total
+}
+
+function applyDiscount(percent) {
+    let total = calculateTotal();
+
+    let discount = (total * percent) / 100;
+
+    return total - discount;
+}
+function listItems() {
+    let names = [];
+
+    for (let i = 0; i < cart.length; i++) {
+        names.push(cart[i].name);
+    }
+
+    return names;
+}
+
+addItem("Laptop", 50000);
+addItem("Mouse", 1500);
+addItem("Keyboard", 3000);
+
+console.log(cart);
+console.log(calculateTotal());
+console.log(applyDiscount(10));
+console.log(listItems());
+removeItem("Mouse");
+
+console.log(cart);
