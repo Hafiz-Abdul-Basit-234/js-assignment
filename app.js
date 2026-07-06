@@ -5,8 +5,11 @@
 
 
 let productName = 'Laptop';
+
 let price = 999.99;
+
 let inStock = true;
+
 console.log(productName, price, inStock);
 
 // Question 2: Mathematical Operations
@@ -24,12 +27,16 @@ let square = 12 ** 2;
 console.log(square);
 
 let increment = 8;
+
 increment++;
+
 console.log(increment);
 
 
 let decrement = 15;
+
 decrement -= 2
+
 console.log(decrement);
 
 //  Question 3: String Concatenation and Case Conversion
@@ -39,9 +46,12 @@ console.log(decrement);
 //   Also find the total length of the full name.
 
 let firstName = "alex";
+
 let lastName = "SMITH";
+
 let CaseFullName = firstName.charAt(0).toUpperCase() + firstName.slice(1).toLocaleLowerCase() + " " + lastName.charAt(0).toUpperCase() + lastName.slice(1).toLocaleLowerCase();
 console.log(CaseFullName);
+
 console.log(CaseFullName.length);
 
 
@@ -51,14 +61,21 @@ console.log(CaseFullName.length);
 //  If between 20 and 30 (inclusive), console.log "Pleasant day".
 //  Otherwise, console.log "Cold day". Test with temperature = 25.
 let temperature = 25;
+
 if (temperature > 30) {
+
     console.log("Hot day");
+
 }
 else if (temperature >= 20 && temperature <= 30) {
+
     console.log("Pleasant day");
+
 }
 else {
+
     console.log("Cold day");
+
 }
 
 
@@ -71,7 +88,9 @@ else {
 // Check if 10 is not equal to 10 OR 5 is greater than 3
 
 console.log(15 === '15');
+
 console.log(20 > 15 && 20 < 25);
+
 console.log(10 !== 10 || 5 > 3);
 
 
@@ -84,9 +103,13 @@ console.log(10 !== 10 || 5 > 3);
 // Console.log the final array and its length
 
 let arr = ["red", "green", "blue"];
+
 arr.push('yellow');
+
 arr.shift()
+
 arr.splice(1, 0, 'purple')
+
 console.log(arr);
 
 
@@ -99,12 +122,17 @@ console.log(arr);
 // Extract the middle 3 elements into a new array
 
 let fruits = ["apple", "banana", "cherry", "date", "elderberry"];
+
 fruits.splice(2, 1);
+
 fruits.splice(2, 1, 'dragonfruit');
+
 console.log(fruits);
 
 let extend = ["apple", "banana", "cherry", "date", "elderberry"];
+
 extend = extend.slice(1, 4);
+
 console.log(extend);
 
 
@@ -113,18 +141,24 @@ console.log(extend);
 // and stops at 8 using break. Also calculate the sum of all printed numbers.
 
 let sum = 0;
+
 for (let i = 1; i <= 10; i++) {
 
     if (i === 5) {
 
         continue;
+
     }
     else if (i === 8) {
+
         break;
+
     }
+
     sum += i;
     console.log(i)
 }
+
 console.log("Sum:", sum)
 
 
@@ -139,10 +173,15 @@ console.log("Sum:", sum)
 // *****
 
 for (let i = 0; i < 5; i++) {
-    let output = ''
+
+    let output = '';
+
     for (let j = 0; j <= i; j++) {
-        output += '*'
+
+        output += '*';
+
     }
+
     console.log(output)
 }
 
@@ -155,8 +194,11 @@ for (let i = 0; i < 5; i++) {
 // Check if the text contains "dog"
 // Get the character at position 10
 let text = "The quick brown fox jumps over the lazy dog";
+
 console.log(text.indexOf("fox"));
+
 console.log(text.slice(9, 19));
+
 console.log(text.includes('dog'));
 console.log(text.charAt(10));
 
@@ -171,8 +213,12 @@ console.log(text.charAt(10));
 
 
 let sentence = "I love JavaScript and JavaScript is awesome";
+
 console.log(sentence.replace('JavaScript', 'coding'));
+
 console.log(sentence.replaceAll('JavaScript', 'JS'));
+
+
 console.log(sentence.replace('awesome', 'AWESOME'));
 
 // Question 12: Number Rounding and Formatting
@@ -185,8 +231,11 @@ console.log(sentence.replace('awesome', 'AWESOME'));
 // Format to show exactly 4 decimal places
 let num = 123.456789;
 console.log(num.toFixed(2))
+
 console.log(Math.round(num))
+
 console.log(Math.floor(num))
+
 console.log(Math.ceil(num))
 console.log(num.toFixed(4))
 
@@ -304,6 +353,7 @@ incrementCounter()
 // and returns the corresponding day name (0=Sunday, 1=Monday, etc.).
 //  Include a default case for invalid numbers.
 let daynum = new Date();
+
 let days = daynum.getDay()
 
 
@@ -314,25 +364,35 @@ switch (days) {
         break;
     case 1:
         console.log('monday');
-        break; case 2:
+        break;
+
+    case 2:
         console.log('Tuesday');
+
         break;
     case 3:
+
         console.log('Wednesday');
         break;
     case 4:
         console.log('Thursday');
+
         break;
     case 5:
         console.log('Friday');
+
         break;
     case 6:
         console.log('Saturday');
         break;
     case 7:
+
         console.log('Sunday');
+
         break;
+
     default:
+
         console.log('invalid numbers');
 
         break;
@@ -342,19 +402,29 @@ switch (days) {
 // Write a while loop that starts at 10 and counts down to 1, printing each number. 
 // Then print "Blast off!". Also calculate the factorial of 5 using a while loop.
 let i = 10;
+
 while (i > 0) {
+
     let j = i--;
+
     console.log(j);
 
 
 }
+
 console.log("Blast off!");
+
 let factorial = 1;
+
 let value = 5;
+
 while (value >= 1) {
+
     factorial *= value
+
     value--;
 }
+
 console.log(factorial);
 
 
@@ -364,22 +434,29 @@ console.log(factorial);
 // (incrementing a counter) until enteredPassword === "secret123" or 5 attempts are made.
 
 let enteredPassword = "";
+
 let attempts = 0;
 
 do {
     attempts++;
+
     console.log(`Attempt ${attempts}`);
 
     if (attempts === 3) {
+
         enteredPassword = "secret123";
     }
 
 } while (enteredPassword !== "secret123" && attempts < 5);
 
 if (enteredPassword === "secret123") {
+
     console.log("Access Granted!");
+
 } else {
+
     console.log("Access Denied! Maximum attempts reached.");
+
 }
 
 // Question 21: Array Methods with for Loop
@@ -394,25 +471,36 @@ let arvalue = [12, 45, 78, 23, 56, 89, 34];
 let max = arvalue[0];
 
 for (let i = 1; i < arvalue.length; i++) {
+
     if (arvalue[i] > max) {
+
         max = arvalue[i];
+
     }
 }
 
 console.log("Max:", max);
 
 let sum1 = 0;
+
 for (let i = 0; i < arvalue.length; i++) {
+
     sum1 += arvalue[i]
+
 }
 let aver = sum1 / arvalue.length;
+
 console.log(aver);
 
 
 let graterthen50 = [];
+
 for (let i = 0; i < arvalue.length; i++) {
+
     if (arvalue[i] > 50) {
+
         graterthen50.push(arvalue[i])
+
     }
 }
 console.log(graterthen50);
@@ -421,6 +509,7 @@ console.log(graterthen50);
 let reversed = [];
 
 for (let i = arvalue.length - 1; i >= 0; i--) {
+
     reversed.push(arvalue[i]);
 }
 
@@ -435,13 +524,19 @@ console.log(reversed);
 // Resets the input field after greeting
 
 function handleClick() {
+
     let input = document.getElementById('username');
+
     if (input.value === '') {
+
         alert('please fill this feild')
+
     }
     else {
-        let content = document.getElementById('greeting')
+        let content = document.getElementById('greeting');
+
         content.innerHTML = `Welcome ${input.value}`;
+
         document.getElementById("username").value = "";
     }
 }
@@ -456,16 +551,22 @@ function handleClick() {
 
 
 function validateForm(email, password) {
+
     if (!email.includes('@')) {
+
         alert('email must contain @')
+
         return false;
     }
     if (password.length < 8) {
+
         alert('password must contain 8 characters');
+
         return false;
 
     }
     return true;
+
 
 }
 console.log(validateForm('basitattari000@gmail.com', '12345678'));
@@ -478,6 +579,7 @@ console.log(validateForm('basitattari000@gmail.com', '12345678'));
 // Converts Celsius to Fahrenheit: (C × 9/5) + 32
 // Converts Fahrenheit to Celsius: (F - 32) × 5/9
 // Returns the converted value with 1 decimal place
+
 function convertTemperature(tepmrature, unit) {
     if (unit === 'C') {
         return ((tepmrature * 9 / 5) + 32).toFixed(1)
@@ -493,6 +595,7 @@ function convertTemperature(tepmrature, unit) {
 console.log(convertTemperature(25, "C"));
 
 console.log(convertTemperature(77, "F"));
+
 console.log(convertTemperature(100, "C"));
 
 // Question 25: Shopping Cart Array Operations
@@ -504,27 +607,36 @@ console.log(convertTemperature(100, "C"));
 // applyDiscount(percent): Applies discount to total
 // listItems(): Returns array of just item names
 let cart = [];
+
 function addItem(name, price) {
+
     cart.push(
         {
             name: name,
             price: price
         }
     );
-    
-    
+
+
 }
 function removeItem(name) {
+
     cart = cart.filter((item) => {
+
         return item.name !== name;
+
     });
 }
-function calculateTotal(){
-let total = 0;
-for(Element of cart){
-total+=Element.price
-}
-return total
+function calculateTotal() {
+
+    let total = 0;
+
+    for (Element of cart) {
+        total += Element.price
+
+    }
+
+    return total
 }
 
 function applyDiscount(percent) {
@@ -534,6 +646,7 @@ function applyDiscount(percent) {
 
     return total - discount;
 }
+
 function listItems() {
     let names = [];
 
@@ -545,13 +658,19 @@ function listItems() {
 }
 
 addItem("Laptop", 50000);
+
 addItem("Mouse", 1500);
+
 addItem("Keyboard", 3000);
 
 console.log(cart);
+
 console.log(calculateTotal());
+
 console.log(applyDiscount(10));
+
 console.log(listItems());
+
 removeItem("Mouse");
 
 console.log(cart);
